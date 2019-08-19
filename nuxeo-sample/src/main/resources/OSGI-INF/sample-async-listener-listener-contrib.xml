@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.sample.listener.sample-async-listener">
+
+  <extension target="org.nuxeo.ecm.core.event.EventServiceComponent" point="listener">
+    <listener async="false" postCommit="true" name="sample-async-listener"
+      class="org.nuxeo.sample.SampleAsyncListener">
+        <event>documentCreated</event>
+        <event>documentModified</event>
+    </listener>
+    <listener async="false" postCommit="true" name="workflow-process-listner"
+      class="org.nuxeo.sample.WorkflowProcessListner">
+      	<event>documentProxyPublished</event>
+      	<event>documentCreated</event>
+        <event>documentModified</event>
+	      <!--event>documentCreated</event>
+	      <event>aboutToRemove</event>
+	      <event>documentCreatedByCopy</event>
+	      <event>documentMoved</event>
+	      <event>documentModified</event>
+	      <event>beforeDocumentModification</event>
+	      <event>aboutToRemoveVersion</event>
+	      <event>lifecycle_transition_event</event>
+	      <event>aboutToCheckIn</event>
+	      <event>documentCheckedIn</event>
+	      <event>aboutToCheckout</event>
+	      <event>documentCheckedOut</event>
+	      <event>documentRestored</event>
+	      <event>beforeRestoringDocument</event>
+	      <event>documentTrashed</event>
+	      <event>documentUntrashed</event>
+	      <event>aboutToCreate</event>
+	      <event>beforeDocumentModification</event>
+	      <event>documentPublished</event>
+	      <event>lifecycle_transition_event</event>
+	      <event>documentCreatedByCopy</event>
+	      <event>beforeDocumentModification</event>
+	      <event>documentCreated</event>
+	      <event>documentImported</event>
+	      <event>documentCreatedByCopy</event>
+	      <event>documentMoved</event>
+	      <event>lifecycle_transition_event</event>
+	      <event>documentRestored</event>
+	      <event>documentSecurityUpdated</event>
+	      <event>documentRemoved</event>
+	      <event>sessionSaved</event>
+	      <event>aboutToCheckIn</event>
+	      <event>documentCheckedOut</event>
+	      <event>documentCheckedIn</event>
+	      <event>binaryTextUpdated</event>
+	      <event>documentTagUpdated</event>
+	      <event>documentProxyUpdated</event>
+	      <event>childrenOrderChanged</event>
+	      <event>documentTrashed</event>
+	      <event>documentUntrashed</event>
+	      <event>documentProxyPublished</event-->
+    </listener>
+  </extension>
+  
+</component>
